@@ -1,0 +1,109 @@
+/* На екранах < 600px — блоки стають вертикальними
+
+На ≥ 900px — розміщення в ряд
+
+Зміна розміру тексту на мобільному */
+/* 🌸 Ніжно-рожевий	Основний фон, 	#FFE4E1
+🍦 Кремово-бежевий	Для секцій або фону сторінки	#FFF5E1
+🍭 Лавандовий	Для кнопок або акцентів	#D8B7DD
+🍓 Малиновий	Активна кнопка / заголовок	#E75480
+🍼 Блакитний дитячий	Акцент / фон іконок або блоків	#AEEAF7
+🍪 Шоколадний світлий	Текст, рамки, баланс кольору	#6F4E37
+🌿 М’ятний	Акценти, наприклад, ціна/знижка	#B5EAD7 */
+body {
+  font-family: "Didact Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  background-color: #f4f4f4;
+  color: #6f4e37;
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+}
+section {
+  margin: 0 48px;
+}
+.hero {
+  display: flex;
+}
+.great-vibes {
+  font-family: "Great Vibes", cursive;
+}
+.hero-text {
+  flex: 1;
+  padding: 24px;
+}
+.hero-text h1 {
+  margin-bottom: 48px;
+}
+
+.hero img {
+  width: 800px;
+  margin: 24px;
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
+  display: block;
+}
+.gallery-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+img {
+  width: 30%;
+  max-width: 900px;
+}
+.gallery-images img {
+  padding: 5px;
+  padding-bottom: 15px;
+  background-color: #fff5e1;
+  border: 2px solid #e75480;
+}
+@media (max-width: 600px) {
+  .gallery-images img {
+    width: 50%;
+    margin: 5px auto;
+    display: block;
+  }
+  body {
+    font-size: 1.25em;
+  }
+  .hero-text {
+  padding:  0;
+}
+
+  .hero img {
+    max-width: 320px;
+  }
+  @media (min-width: 600px) and (max-width: 900px) {
+    .gallery-images img {
+      
+      margin: 5px;
+      display: inline-block;
+    }
+  }
+  body {
+    font-size: 1.5em;
+  }
+  .hero{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #d8b7dd;
+
+  text-decoration: none;
+  border-radius: 5px;
+  border-color: #ffe4e1;
+  transition: background-color 0.3s ease;
+}
+.btn:hover {
+  background-color: #e75480;
+  color: #fff5e1;
+  color: #eaf2f4;
+}
